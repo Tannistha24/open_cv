@@ -12,7 +12,7 @@ def rescaleFrame(frame,scale=0.5):
 
 resized_img=rescaleFrame(img)
 
-# converting to grayscale
+# converting to grayscalegit
 # gray=cv.cvtColor(resized_img,cv.COLOR_BGR2GRAY)
 # cv.imshow('Gray',gray)
 
