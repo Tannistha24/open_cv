@@ -1,9 +1,9 @@
 import cv2 as cv
 
-# img=cv.imread("C:\\Users\\tanni\\OneDrive\\Pictures\\43 - J5nzSCU.jpg")
-# cv.imshow('Wallpaper', img)
+img=cv.imread("C:\\Users\\tanni\\OneDrive\\Pictures\\43 - J5nzSCU.jpg")
+cv.imshow('Wallpaper', img)
 
-# cv.waitKey(0)
+cv.waitKey(0)
 
 # reading videos
 capture = cv.VideoCapture(0)

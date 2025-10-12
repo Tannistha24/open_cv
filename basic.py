@@ -1,7 +1,7 @@
 import cv2 as cv 
 
 img=cv.imread("C:\\Users\\tanni\\OneDrive\\Pictures\\43 - J5nzSCU.jpg")
-# cv.imshow('Wallpaper', img)
+cv.imshow('Wallpaper', img)
 def rescaleFrame(frame,scale=0.5):
     # live videos,images,videos
     width=int(frame.shape[1]*scale)
@@ -12,26 +12,28 @@ def rescaleFrame(frame,scale=0.5):
 
 resized_img=rescaleFrame(img)
 
-# converting to grayscalegit
-# gray=cv.cvtColor(resized_img,cv.COLOR_BGR2GRAY)
-# cv.imshow('Gray',gray)
+# converting to grayscale
+gray=cv.cvtColor(resized_img,cv.COLOR_BGR2GRAY)
+cv.imshow('Gray',gray)
 
 # # Blur a image
-# blur=cv.GaussianBlur(resized_img,(9,9),cv.BORDER_DEFAULT)
-# cv.imshow("Blur",blur)
+blur=cv.GaussianBlur(resized_img,(9,9),cv.BORDER_DEFAULT)
+cv.imshow("Blur",blur)
 
-# Edge cascade
+# # Edge cascade
 canny=cv.Canny(resized_img,125,175)
 cv.imshow("canny",canny)
 
-# ilating the image
+# # ilating the image
 dilated=cv.dilate(canny,(3,3),iterations=1)
 cv.imshow("Dilated",dilated)
 
-# eroded
+# # eroded
 eroded=cv.erode(dilated,(3,3),iterations=1)
 cv.imshow("eroded",eroded)
 
+# cropping
+cropped=img[50:200,200:400]
+cv.imshow("cropped",cropped)
+
 cv.waitKey(0)
-
-
