@@ -1,0 +1,1 @@
+    # lmList, bbox = detector.findPosition(img, draw=False)
